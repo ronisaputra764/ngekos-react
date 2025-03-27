@@ -86,6 +86,15 @@ export default function Checkout({ formatRupiah }) {
         });
     };
 
+    const accordions = document.querySelectorAll('.accordion');
+    accordions.forEach((accordion) => {
+        // Calculate the height of each accordion element
+        const height = accordion.scrollHeight;
+
+        // Set the height as an inline style
+        accordion.style.height = `${height}px`;
+    });
+
     return (
         <div className="relative flex flex-col w-full max-w-[640px] min-h-screen mx-auto bg-white overflow-x-hidden">
             {/* Background */}
